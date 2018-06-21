@@ -187,7 +187,7 @@ public class CameraHandler {
             for (int format : configs.getOutputFormats()) {
                 Log.d(TAG, "Getting sizes for format: " + format);
                 for (Size s : configs.getOutputSizes(format)) {
-                    Log.d(TAG, "\t" + s.toString());
+                     Log.d(TAG, "\t" + s.toString());
                 }
             }
             int[] effects = characteristics.get(CameraCharacteristics.CONTROL_AVAILABLE_EFFECTS);
