@@ -56,6 +56,8 @@ public class ImageClassifierActivity extends Activity {
     private TextView mResultText;
 
     // TODO: ADD ARTIFICIAL INTELLIGENCE
+    
+
     // TODO: ADD CAMERA SUPPORT
 
     /**
@@ -84,6 +86,8 @@ public class ImageClassifierActivity extends Activity {
      */
     private void doRecognize(Bitmap image) {
         // TODO: ADD ARTIFICIAL INTELLIGENCE
+
+
         Collection<Recognition> results = null;
         onPhotoRecognitionReady(results);
     }
@@ -121,16 +125,21 @@ public class ImageClassifierActivity extends Activity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.activity_camera);
+
         mImage = findViewById(R.id.imageView);
         mResultText = findViewById(R.id.resultText);
 
         updateStatus(getString(R.string.initializing));
+
         initCamera();
         initClassifier();
         initButton();
+
         updateStatus(getString(R.string.help_message));
     }
 
